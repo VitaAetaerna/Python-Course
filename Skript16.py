@@ -109,13 +109,18 @@ print("End of Example \n")
 
 # (d) Fur eine Zeichenkette A, kontrolliere ob der Inhalt dieser Zeichenkette lexikographisch geordnet ¨
 # ist.
-# Beispiele: ′′abbbcddeeffg′′
-# -
-# ′′wahr′′
-# ,
-# ′′aabbcdceeef′′
-# -
-# ′′f alsch′′
+def LexikographischArray(array):
+    for i in range(len(array)):
+        array[i] = str(array[i]).lower()
+
+    for i in range(len(array)):
+        for j in range(0, len(array)-1-i):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+    print(array)
+
+LexikographischArray(["a", "c", "x", "z", "Q", "E", "S", "b", "f", "p"])
+print("End of Example \n")
 
 
 # (e) Fur ein Array aus ganzen Zahlen A, sortiere die einzelnen Elemente nach Gr ¨ ¨oße. Nutze hierzu eine
