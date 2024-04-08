@@ -1,5 +1,10 @@
 import sys
 import random 
+
+# Fragen von @ThompsonA93 und @nekosilvertail
+
+
+
 # 1. Was ist Python? Wie fuktioniert pythion?
 # Python ist eine Objektorientierte oder Prozedurale Programmiersprache die von
 # Guido von Rossum in den 90er erstellt wurde.
