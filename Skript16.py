@@ -121,11 +121,31 @@ print("End of Example \n")
 # (e) Fur ein Array aus ganzen Zahlen A, sortiere die einzelnen Elemente nach Gr ¨ ¨oße. Nutze hierzu eine
 # eigene Implementierung uber Schleifen. ¨
 # Beispiele fur Sortierung: [0 ¨ , 3, 2, 5, 4] - [0, 2, 3, 4, 5]
+def Sort(array):
+    for i in range(len(array)):
+        for j in range(0, len(array)-1-i):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+    print(array)
+
+Sort([1,9,9,65,3,7,5,3])
+print("End of Example \n")
+
 
 # (f) Wenn A eine Zeichenkette beinhaltet, kontrolliere ob es sich um ein Palidrom handelt. Ein Palidrom
 # ist ein Wort das sich von links gleich liest, wie von rechts (vorsicht mit Leerzeichen!). Wenn A ein
 # Palidrom ist, dann gebe ’Ja’, andernfalls ’Nein’ aus.
 # Beispiele fur Palindrome: ’Ava’, ’Dad’, ’Ebbe’, ’Ehe’, ’Rotor’, ’Der Freibier Fred’, ’Und nu’ ¨
+def Palidrom(text):
+    text = str(text)
+    if text.lower() == text[::-1].lower():
+        print("Palidrom")
+    else: print("Kein Palidrom")
+
+Palidrom("Anna")
+Palidrom("meow")
+print("End of Example \n")
+
 
 # (g) Wenn A und B jweils eine Zeichenkette beinhalten, kontrolliere ob A ein Anagramm von B ist.
 # Ein Anagram ist ein Wort, dessen Buchstaben man zu einem anderen Wort umformen kann.
