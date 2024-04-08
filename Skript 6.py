@@ -23,6 +23,8 @@ print("Zahl 1: ", a, "Zahl 2:", b)
 for x in range(b-1):
     a += c
 print(a)
+print("End of Example \n")
+
 # (c) Die Division ist das wiederholte subtrahieren von Zahlen. Stelle die Division von 2 Zahlen als
 # Subtraktion, mithilfe einer Schleife da.
 dividend = random.randint(15, 40)
@@ -33,6 +35,8 @@ while dividend >= divisor:
     dividend -= divisor
     quotient += 1
 print(quotient)
+print("End of Example \n")
+
 # (d) Fur eine beliebige Zeichenkette, suche mithilfe einer Schleife ob der Buchstabe ’a’ vorkommt. Wenn ¨
 # ja, gib die Position des ersten ’a’ aus und terminiere die Schleife.
 stringToSearch = "Mein Name ist Leon, Hallo"
@@ -40,7 +44,7 @@ for lengthOfString in range(len(stringToSearch)):
     if stringToSearch.index("a"):
         print("a was found at ",stringToSearch.index("a"))
         break
-    print("\n")
+print("End of Example \n")
 
 
 # (e) Fur eine beliebige Zeichenkette, suche mithilfe einer Schleife ob der Buch
@@ -54,3 +58,4 @@ while index < len(text):
             break
         print('a found at', index)
         index += 1 # +1 because len('a') == 1
+print("End of Example \n")

@@ -43,6 +43,7 @@ print (a / b)
 
 # Modulo
 print(a % b)
+print("End of Example \n")
 
 # (b) Definiere die bitweisen Operatoren anhand eines kurzen Python-Programmes.
 c = random.randint(30, 50)
@@ -61,6 +62,7 @@ print(~c, ~b)
 
 # ^ extra oder bzw. XOR
 print(c ^ d)
+print("End of Example \n")
 
 # (c) Definiere die logischen Operatoren anhand eines kurzen Python-Programmes
 e = 10
@@ -74,6 +76,7 @@ print((e==f) or (f==7))
 
 # not / Nicht
 print(not(e==f))
+print("End of Example \n")
 
 # Wie funktionieren diese Operatoren, wenn man sie bei komplexen Datentypen einsetzt?
 # Sie können gleich funktionieren oder abänderungen enthalten durch die Struktur der Variable
@@ -85,6 +88,8 @@ print([1,2,3] + [1,2,3])
 
 # Tuple
 print((1,2) + (1,2))
+print("End of Example \n")
+
 
 
 # (b) Wie werden Mapping-Daten zusammengefugt?
@@ -94,6 +99,8 @@ g = set()
 h = set()
 g.add("h"), h.add("g")
 print(g, h)
+print("End of Example \n")
+
 
 
 
