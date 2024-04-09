@@ -1,4 +1,5 @@
 import random
+from nltk.corpus import wordnet
 # 16. Erstelle ein theoretisches Konzept zur Problemlösung folgender Probleme. Modelliere kurz, wie sich ein
 # Programm implementieren liese (graphisch, Pseudocode, ...). Implementiere anschließend eine ausführbare 
 # Lösung in Python.
@@ -156,6 +157,20 @@ print("End of Example \n")
 # Ein Anagram ist ein Wort, dessen Buchstaben man zu einem anderen Wort umformen kann.
 # Beispiele fur Anagramme: ’Lehm’ - ’Mehl’, ’Maus’ - ’Saum’, ’Tom Vorlost Riddle’ - ’Ist Lord ¨
 # Voldemort’
+def Anagramm(a, b):
+    a = a.lower()
+    if type(a) and type (b) == str:
+        pass
+    else: print("Not a String")
+    for i in range(len(a)):    
+        result = ''.join((random.choice(a)) for x in range(len(a)))  
+        if wordnet.synsets(result):
+                print(result, "is another english Word")
+                print(a, " is a Anagramm")
+
+Anagramm("Maus", "Meow")
+
+
 
 # (h) Wenn A eine Zeichenkette beinhaltet, kontrolliere ob es sich um ein Isogramm handelt. Ein Isogramm ist ein Wort oder Satz, in welcher jeder Buchstabe nur einmal, oder gleich h¨aufig, vorkommt.
 # Beispiele fur Isogramme: ’Mobilfunkgespr ¨ ¨ach’, ’Heiz¨olruckstoßabd ¨ ¨ampfung’, ’Dorfplatzschießubung’, ¨
