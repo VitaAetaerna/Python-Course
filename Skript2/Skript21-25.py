@@ -46,6 +46,9 @@ stack.push(42)
 stack.push(55)
 print(stack.pop())
 print(stack.CheckEmpty())
+print("End of Example \n")
+
+
 
 # QUEUE
 class Queue():
@@ -88,6 +91,8 @@ time.sleep(1)
 queue.FillQueue()
 queue.PopConnect()
 queue.FillQueue()
+print("End of Example \n")
+
 
 # 25. Was ist ein Sortieralgorithmus?
 # Sortieralgorithmen sind mathematische prozesse die das Sortieren von bestimmten Werten
