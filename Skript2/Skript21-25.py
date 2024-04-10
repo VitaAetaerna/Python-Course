@@ -1,4 +1,5 @@
-import time, random
+import time, random, sys
+from hashlib import sha256
 # 21. Beschreibe anhand von 3 graphischen Beispielen wie Landau-Symbole funktionieren.
 
 # 22. Was ist eine Datenstruktur?
@@ -80,10 +81,7 @@ class Queue():
 
         print("Clients Queue: ", self.clients)
         print("Clients in Queue: ", self.clientQueue)
-
-
 users = ["Tom", "LeonS", "Irnes", "Chris", "LeonG", "Alex", "Patrick"]
-
 queue = Queue()
 for x in range(len(users)):
     queue.GetUsers(users[x])
@@ -94,6 +92,34 @@ queue.FillQueue()
 print("End of Example \n")
 
 
+
+# HASTABLE O_o please FBI, its a Method ok?
+class HashTable():
+    data = []
+    hashedData = {'Hash': "", 'Value': ""}
+    def GetData(self, passedData):
+        return self.data.append(passedData)
+
+    #  sha256(bytes(self.data[x], encoding="utf-8")).hexdigest()
+    #             self.hashedData.update({'Hash': sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(), 'Value': self.data[x]}
+    def HashDataAndStore(self):
+        for x in range(len(self.data)):
+            self.hashedData.update({'Hash': sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(), 'Value': self.data[x]})
+        print(self.hashedData)
+
+
+    def SearchHash(self, keyword):
+        token = sha256(bytes(keyword, encoding="utf-8")).hexdigest()
+        for key in self.hashedData.keys():
+            print(self.hashedData[key])
+
+
+userData = ["Tom", "Leon", "Chris", "Arthur", "Alex", "Irnes", "Elisabeth"]
+hashing = HashTable()
+for x in range(len(userData)):
+    hashing.GetData(userData[x])
+    hashing.HashDataAndStore()
+hashing.SearchHash("Tom")
 # 25. Was ist ein Sortieralgorithmus?
 # Sortieralgorithmen sind mathematische prozesse die das Sortieren von bestimmten Werten
 # in einer Datenstruktur vereinfachen und schneller machen bsp: Brick, Bubble, Quicksort, usw...
