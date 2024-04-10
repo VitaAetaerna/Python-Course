@@ -96,7 +96,7 @@ print("End of Example \n")
 # HASTABLE O_o please FBI, its a Method ok?
 class HashTable():
     data = []
-    hashedData = {'Hash': "", 'Value': ""}
+    hashedData = {}
     def GetData(self, passedData):
         return self.data.append(passedData)
 
@@ -104,14 +104,13 @@ class HashTable():
     #             self.hashedData.update({'Hash': sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(), 'Value': self.data[x]}
     def HashDataAndStore(self):
         for x in range(len(self.data)):
-            self.hashedData.update({'Hash': sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(), 'Value': self.data[x]})
-        print(self.hashedData)
+            self.hashedData.update({sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(): self.data[x]})
 
 
     def SearchHash(self, keyword):
         token = sha256(bytes(keyword, encoding="utf-8")).hexdigest()
-        for key in self.hashedData.keys():
-            print(self.hashedData[key])
+        if str(token) in self.hashedData:
+            print(keyword, " Was found")
 
 
 userData = ["Tom", "Leon", "Chris", "Arthur", "Alex", "Irnes", "Elisabeth"]
