@@ -14,7 +14,7 @@ Array.append(4) # Fügt 4 hinzu
 Array.pop() # Nimmt letzten eintrag (4)
 
 Tuple = (800, 600)
-# Tuples können nicht verändert oder gelöscht oder getauscht werden
+# Tuples können nicht verändert, gelöscht oder getauscht werden
 
 Set = set()
 Set.add(2)
