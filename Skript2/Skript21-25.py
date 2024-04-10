@@ -1,5 +1,6 @@
 import time, random, sys
 from hashlib import sha256
+import names
 # 21. Beschreibe anhand von 3 graphischen Beispielen wie Landau-Symbole funktionieren.
 
 # 22. Was ist eine Datenstruktur?
@@ -100,8 +101,6 @@ class HashTable():
     def GetData(self, passedData):
         return self.data.append(passedData)
 
-    #  sha256(bytes(self.data[x], encoding="utf-8")).hexdigest()
-    #             self.hashedData.update({'Hash': sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(), 'Value': self.data[x]}
     def HashDataAndStore(self):
         for x in range(len(self.data)):
             self.hashedData.update({sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(): self.data[x]})
@@ -111,14 +110,22 @@ class HashTable():
         token = sha256(bytes(keyword, encoding="utf-8")).hexdigest()
         if str(token) in self.hashedData:
             print(keyword, " Was found")
+        else:
+            print("Not found ")
 
 
-userData = ["Tom", "Leon", "Chris", "Arthur", "Alex", "Irnes", "Elisabeth"]
+userData = []
+for i in range(1000):
+    userData.append(names.get_first_name())
+    print(userData[i])
 hashing = HashTable()
 for x in range(len(userData)):
     hashing.GetData(userData[x])
     hashing.HashDataAndStore()
+print("starting to search now")
+start = time.time()
 hashing.SearchHash("Tom")
+print("Search took ", time.time() - start)
 # 25. Was ist ein Sortieralgorithmus?
 # Sortieralgorithmen sind mathematische prozesse die das Sortieren von bestimmten Werten
 # in einer Datenstruktur vereinfachen und schneller machen bsp: Brick, Bubble, Quicksort, usw...
