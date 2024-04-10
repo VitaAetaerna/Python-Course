@@ -1,4 +1,4 @@
-import time, random, sys
+import time
 from hashlib import sha256
 import names
 # 21. Beschreibe anhand von 3 graphischen Beispielen wie Landau-Symbole funktionieren.
