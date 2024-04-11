@@ -26,7 +26,7 @@ Set.clear()
 
 # STACK
 class Stack():
-    """Items habve to be INT"""
+    """Items have to be INT"""
     # Create Data Array (List)
     data = []
     # Pop Data (last Index)
@@ -126,6 +126,11 @@ print("starting to search now")
 start = time.time()
 hashing.SearchHash("Tom")
 print("Search took ", time.time() - start)
+
+
+
+
+
 # 25. Was ist ein Sortieralgorithmus?
 # Sortieralgorithmen sind mathematische prozesse die das Sortieren von bestimmten Werten
 # in einer Datenstruktur vereinfachen und schneller machen bsp: Brick, Bubble, Quicksort, usw...
