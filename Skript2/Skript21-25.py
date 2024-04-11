@@ -94,19 +94,19 @@ print("End of Example \n")
 
 
 
-# HASTABLE O_o please FBI, its a Method ok?
+# HASHTABLE please FBI, its a Method ok? I am not queuing a bunch of people to sell stacks of hash
 class HashTable():
     data = []
     hashedData = {}
-    def GetData(self, passedData):
+    def GetData(self, passedData) -> str:
         return self.data.append(passedData)
 
-    def HashDataAndStore(self):
+    def HashDataAndStore(self) -> str:
         for x in range(len(self.data)):
             self.hashedData.update({sha256(bytes(self.data[x], encoding="utf-8")).hexdigest(): self.data[x]})
 
 
-    def SearchHash(self, keyword):
+    def SearchHash(self, keyword) -> str:
         token = sha256(bytes(keyword, encoding="utf-8")).hexdigest()
         if str(token) in self.hashedData:
             print(keyword, " Was found")
