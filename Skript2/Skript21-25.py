@@ -1,6 +1,7 @@
 import time
 from hashlib import sha256
 import names
+import random
 # 21. Beschreibe anhand von 3 graphischen Beispielen wie Landau-Symbole funktionieren.
 
 # 22. Was ist eine Datenstruktur?
@@ -26,7 +27,6 @@ Set.clear()
 
 # STACK
 class Stack():
-    """Items have to be INT"""
     # Create Data Array (List)
     data = []
     # Pop Data (last Index)
@@ -42,7 +42,7 @@ class Stack():
         else: return self.data
 # Definiere eine Variable die die Klasse Stack aufruft
 stack = Stack()
-# Rufe Mthoden in C (Stack) auf
+# Rufe Mthoden in Stack auf
 stack.push(77)
 stack.push(42)
 stack.push(55)
@@ -115,7 +115,7 @@ class HashTable():
 
 
 userData = []
-for i in range(1000):
+for i in range(100):
     userData.append(names.get_first_name())
     print(userData[i])
 hashing = HashTable()
@@ -127,9 +127,21 @@ start = time.time()
 hashing.SearchHash("Tom")
 print("Search took ", time.time() - start)
 
+# Heap 
+class Heap():
+    data = {}
+
+    def AddItem(self, item : int, priority : int) -> int:
+        # Add Priority Key first and then the Value for its key
+        self.data.update({priority: item})
+        print("Added key and item: ", self.data)        
 
 
-
+    def GetItem(self, item : int, priority : int) -> int:
+        print(self.data[str(priority)])
+h = Heap()
+h.AddItem(7, 2)
+h.GetItem(7, 2)
 
 # 25. Was ist ein Sortieralgorithmus?
 # Sortieralgorithmen sind mathematische prozesse die das Sortieren von bestimmten Werten
