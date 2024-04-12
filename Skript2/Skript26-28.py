@@ -24,7 +24,7 @@ array = []
 for i in range(100):
     array.append(random.randint(0, 1000))
 
-    
+
 
 #BUBBLE
 def BubbleSort(listOfNumbers):
@@ -136,3 +136,10 @@ InsertionSort(listOfNumbersInsertion)
 BrickSort(arr)
 countingSort(array)
 input()
+
+# 27. Was ist der 
+# schnellste, was ist der langsamste Sortieralgorithmus? Welche Speicher- und Zeitkomplexit¨aten weißen
+# diese auf?
+
+# Der schellste ist der QuickSort durch die vielen aufteillungen, wodurch man ihn auch parallelisysieren kann
+# Der langsamste ist der Bubble Sort da er 2 mal die Ganze Liste durchgehen muss
