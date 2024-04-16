@@ -46,7 +46,7 @@ for lengthOfString in range(len(stringToSearch)):
         break
 print("End of Example \n")
 
-
+#meow
 # (e) Fur eine beliebige Zeichenkette, suche mithilfe einer Schleife ob der Buch
 # Fur eine beliebige Zeichenkette, suche mithilfe einer Schleife ob der Buchstabe ’a’ oder ’A’ vor- ¨
 # kommt. Wenn ja, gib die Position aus und fuhre den Task weiter fort
